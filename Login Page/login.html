@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/e872ba44e8.js" crossorigin="anonymous"></script> -->
+     <link rel="stylesheet"  href="style.css">
+     <script src="https://kit.fontawesome.com/e872ba44e8.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppies', sans-serif;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            width:100%;
+            background-color: antiquewhite;
+            /* background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)), url(background.png); */
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+        .form-box{
+            width: 90%;
+            max-width: 450px;
+            position: absolute;
+            top: 44%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background: #fff;
+            padding: 50px 60px 70px;
+            text-align: center;
+        }
+        .form-box h1{
+            font-size: 30px;
+            margin-bottom: 60px;
+            color: #3c00a0;
+            position: relative;
+        }
+        /* .form-box h1::after{
+            content: '';
+            width: 30px;
+            height: 4px;
+            border-radius: 3px;
+            background: #3c00a0;
+            position: absolute;
+            bottom: -12px;
+            left:50%;
+            transform:translateX(-50%);
+        } */
+        .input-field{
+            background: #eaeaea;
+            margin: 15px 0;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+        }
+        input{
+            width: 300px;
+            background: transparent;
+            border: 0;
+            outline: 0;
+            padding: 10px 15px;
+            /* max-height: 45px;
+            transition: max-height 0.5s; */
+            /* overflow: hidden; */
+        }
+        .input-field i{
+            margin-left:15px;
+            color: #999;
+        }
+        form p{
+            text-align:left;
+            font-size: 13px;
+        }
+        form p a{
+            text-decoration: none;
+            color: #3c00a0;
+        }
+        .btn-filed button{
+            background: #3c00a0;
+            color: #fff;
+            border-radius: 20px;
+            border: 0.5px solid black ;
+            height: 35px;
+            width: 50%;
+            outline: 0;
+            cursor: pointer;
+            /* transition:background 1s; */
+        }
+        .btn-filed button:hover{
+            transition: 1s;
+            background:rgb(245, 237, 144);
+            border: 0.5px solid black ;
+            height: 37px;
+            width: 51%;
+            color: black;
+        }
+        .input-group{
+            height:200px;
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="form-box">
+            <h1 id="title">Log In</h1>
+            <form>
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                      <i class="fa-solid fa-user"></i>
+                      <input type="text" placeholder="Name">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email">
+                      </div>
+
+                      <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password">
+                      </div>
+
+                      <P>Lost password<a href='#'>Click Here!</a></P>
+                </div>
+                <div class="btn-filed">
+                    <button type="button" id="loginBtn">Log In</button>
+                </div>
+            </form>
+        </div>
+
+     </div>
+     <script>
+        let loginBtn = document.getElementById("loginBtn");
+        let nameField = document.getElementById("nameField");
+        let title = document.getElementById("title");
+
+
+        loginBtn.onclick = function(){
+           nameField.style.maxHeight = "0";
+           title.innerHTML = "Log In";
+           loginBtn.classList.add("disable");
+           loginBtn.classList.remove("disable");
+        }
+     </script>
+</body>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script> -->
+</html>
