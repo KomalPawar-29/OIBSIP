@@ -1,6 +1,6 @@
-function click()
-        {
-           alert("You Can Login Here !!!");
+// function click()
+//         {
+//            alert("You Can Login Here !!!");
           
-        }
-        click()
+//         }
+//         click()

@@ -18,7 +18,7 @@
             height: 100vh;
             width:100%;
             background-color: antiquewhite;
-            background-image:  url(login.img);  
+            background-image:  url(images.jpeg);  
             background-position: center;
             background-size: cover;
             position: relative;
@@ -30,7 +30,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
-            background: #b4b1b1;
+            background: #dcafaf;
             padding: 50px 60px 70px;
             text-align: center;
             border-radius: 5px;
@@ -94,6 +94,9 @@
         .input-group{
             height:200px;
         }
+        .password{
+            text-align: center;
+        }
       
     </style>
 </head>
@@ -101,12 +104,12 @@
      <div class="container"   >
         <!-- <img src="login.img"/> -->
         <div class="form-box">
-            <h1 id="title"><b>Login</b></h1>
+            <h1 id="title"><b>Register</b></h1>
             <form>
                 <div class="input-group">
                     <div class="input-field" >
                       <i class="fa-solid fa-user"></i>
-                      <input type="text" placeholder="Name" required>
+                      <input type="text" placeholder="Username" required>
                     </div>
 
                     <div class="input-field">
@@ -117,14 +120,21 @@
                       <div class="input-field">
                         <i class="fa-solid fa-lock"></i>
                         <input type="password" placeholder="Password" required>
+                      </div>
+
+                      <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Confirm Password" required>
                       </div><br>
 
-                      <P>Forgot Password ? <a href='#'>Click Here!</a></P>
-                </div>
-                <div class="btn-filed">
+                      <div class="btn-filed">
                     
-                    <button onclick="click()">Login</button>
+                        <button onclick="click()">Register</button>
+                    </div><br>
+
+                      <P class="password">Forgot Password ? <a href='#'>Click Here!</a></P>
                 </div>
+                
             </form>
         </div>
 
@@ -134,16 +144,13 @@
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
 
-     <script >
-
-     function click()
+        <script> 
         {
-           alert("You Can Login Here !!!");
-          
+         alert("Your Register Is Successfully !!! ");  
         }
         click()
-      </script>
-
+        
+     </script>
 </body>
 
 </html>
